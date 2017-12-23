@@ -1,0 +1,19 @@
+{
+  "name": "merrn-sample",
+  "version": "1.0.0",
+  "description": "Sample MERRN Stack App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RADesai/merrn-sample.git"
+  },
+  "author": "RADesai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RADesai/merrn-sample/issues"
+  },
+  "homepage": "https://github.com/RADesai/merrn-sample#readme"
+}
