@@ -1,4 +1,3 @@
-// import { ACTION_NAME } from '../constants';
 import { FETCH_MODELS, PENDING, FULFILLED, REJECTED } from '../constants';
 
 const initialState = {

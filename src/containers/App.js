@@ -7,11 +7,6 @@ import LandingPage from '../components/LandingPage';
 import '../assets/scss/App.scss';
 
 class App extends Component {
-
-    // componentDidMount() {
-    //     this.props.actions.fetchModels()
-    // }
- 
     render() {
         return (
             <div className="app-container">
