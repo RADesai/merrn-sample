@@ -1,0 +1,22 @@
+@import "./Styles";
+
+.landing {
+    font-family: $app-font;
+    color: $deep-red;
+    .landing-title {
+        font-size: 64px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    .landing-message {
+        font-size: 20px;
+        .landing-card {
+            border: 2px 4px 2px 4px $deep-red;
+            padding-bottom: 20px;
+        }
+        .landing-hr {
+            border-color: $deep-red;
+            box-shadow: 0 0 2px 0 $basketball;
+        }
+    }
+}
