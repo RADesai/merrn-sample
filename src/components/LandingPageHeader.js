@@ -1,8 +1,7 @@
 import React from 'react';
-// import SampleApiCalls from './SampleApiCalls';
 import '../assets/scss/LandingPage.scss';
 
-export default function LandingPage() {
+const LandingPageHeader = () => {
     const getLandingMessage = () =>
         <div>
             <div className="landing-title">MERRN Sample</div>
@@ -23,3 +22,5 @@ export default function LandingPage() {
         </div>
     )
 }
+
+export default LandingPageHeader;
