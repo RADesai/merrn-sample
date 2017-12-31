@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import '../assets/scss/ModelList.scss'; TODO: Add styles for model list
+import '../assets/scss/ModelList.scss';
 
 export default function ModelList(props) {
     const { models } = props;
@@ -11,7 +11,7 @@ export default function ModelList(props) {
             <li key={ model._id } className="list-group-item">
                 Name: { model.name }
                 <br />
-                id: { model._id }
+                <small className="text-muted">id: { model._id }</small>
             </li>
             )}
         </ul >

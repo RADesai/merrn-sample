@@ -25,7 +25,7 @@ const SampleApiCalls = (props) => {
                         <Field name="modelName" component="input" type="text" placeholder="Name your object"/>
                     </div>
                 </div>
-                <div>
+                <div className="btn-group" role="group" aria-label="POST-example">
                     <button type="submit" disabled={ pristine || submitting } className="btn btn-api-call">
                         Submit
                     </button>
