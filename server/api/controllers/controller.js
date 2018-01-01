@@ -1,6 +1,13 @@
 const SampleModel = require('../models/SampleModel.js');
 
 module.exports = {
+    getModels: (req, res) => {
+        SampleModel.find((err, models) => {
+            err
+                ? res.send(err)
+                : res.json(models);
+        });
+    },
     addModel: (req, res) => {
         let model = new SampleModel();
         model.name = req.body.modelName;
@@ -10,11 +17,16 @@ module.exports = {
                 : res.json({message: 'Model created!'})
         });
     },
-    getModels: (req, res) => {
-        SampleModel.find((err, models) => {
+    updateModel: (req, res) => {
+        SampleModel.findById(req.params.id, (err, model) => {
             err
                 ? res.send(err)
-                : res.json(models);
-        });
+                : model.name = req.body.newModelName;
+            model.save((error) => {
+                error
+                    ? res.send(error)
+                    : res.json({message: 'Model updated!'})
+            });
+        })
     }
 }

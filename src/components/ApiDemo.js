@@ -10,7 +10,8 @@ const ApiDemo = (props) =>
                 status={ props.status }
                 fetchModelsActionDispatcher={ props.actions.fetchModels }
                 addModelActionDispatcher={ props.actions.addModel }
-                />
+                updateModelActionDispatcher={ props.actions.updateModel }
+            />
         </div>
         <div className="col-sm-12 col-lg-6">
             <ModelList
@@ -23,6 +24,7 @@ ApiDemo.propTypes = {
     status: PropTypes.string,
     fetchModelsActionDispatcher: PropTypes.func,
     addModelActionDispatcher: PropTypes.func,
+    updateModelActionDispatcher: PropTypes.func,
     models: PropTypes.array
 }
 

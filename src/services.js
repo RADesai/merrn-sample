@@ -5,3 +5,5 @@ import axios from 'axios';
 export const fetchModels = () => axios.get('/api/models')
 
 export const addModel = (model) => axios.post('/api/models', model)
+
+export const updateModel = (newModel) => axios.put(`/api/models/${newModel.modelId}`, newModel)
