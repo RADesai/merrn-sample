@@ -7,6 +7,8 @@ const ApiDemo = (props) =>
         <div className="col-sm-12 col-lg-6">
             <SampleApiCalls
                 status={ props.status }
+                selectedCrudOperation={ props.selectedCrudOperation }
+                setCrudOperation={ props.actions.setCrudOperation }
                 fetchModelsActionDispatcher={ props.actions.fetchModels }
                 addModelActionDispatcher={ props.actions.addModel }
                 updateModelActionDispatcher={ props.actions.updateModel }

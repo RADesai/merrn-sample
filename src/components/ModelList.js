@@ -15,7 +15,7 @@ export default function ModelList(props) {
             </li>
             )}
         </ul >
-        : <div />
+        : null
 }
 
 ModelList.propTypes = {

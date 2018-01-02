@@ -1,6 +1,21 @@
 @import "./Styles";
 
-.btn-api-call {
-    background-color: $basketball;
-    color: $light-yellow;
+.sample-calls {
+    .btn-crud-operation {
+        font-size: 26px;
+        border-color: $deep-red;
+        background-color: $light-yellow;
+        color: $deep-red;
+    }
+    .btn-crud-operation:hover {
+        color: $light-yellow;
+        background-color: $basketball;
+        cursor: pointer;
+    }
+
+    .crud-operations {
+        border: 2px 4px 2px 4px $deep-red;
+        padding: 15px;
+        font-size: 20px;
+    }
 }

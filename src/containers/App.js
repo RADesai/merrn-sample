@@ -22,14 +22,15 @@ class App extends Component {
 
 App.PropTypes = {
     actions: PropTypes.object,
+    selectedCrudOperation: PropTypes.string,
     models: PropTypes.array,
     status: PropTypes.string
 };
 
 function mapStateToProps(state) {
-    const { models } = state.sampleReducer;
+    const { selectedCrudOperation, models } = state.sampleReducer;
     const { status } = state.statusReducer;
-    return { status, models };
+    return { selectedCrudOperation, models, status };
 }
 
 function mapDispatchToProps(dispatch) {
