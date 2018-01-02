@@ -1,5 +1,9 @@
 @import "./Styles";
 
+.list-group {
+    padding-bottom: 15px;
+}
+
 .list-group-item {
     background-color: $light-yellow;
     border-color: $deep-red;

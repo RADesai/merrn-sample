@@ -22,7 +22,8 @@ module.exports = function (app, express) {
         .post(controller.addModel);
 
     router.route('/models/:id')
-        .put(controller.updateModel);
+        .put(controller.updateModel)
+        .delete(controller.deleteModel);
 
     app.use('/api', router);
 
