@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import SampleApiCalls from '../components/SampleApiCalls';
 import ModelList from '../components/ModelList';
 
