@@ -21,6 +21,10 @@ module.exports = function (app, express) {
         .get(controller.getModels)
         .post(controller.addModel);
 
+    router.route('/models/:id')
+        .put(controller.updateModel)
+        .delete(controller.deleteModel);
+
     app.use('/api', router);
 
     app.get('/*', (req, res) => {

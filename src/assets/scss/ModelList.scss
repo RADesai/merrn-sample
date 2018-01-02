@@ -1,0 +1,17 @@
+@import "./Styles";
+
+.list-group {
+    padding-bottom: 15px;
+}
+
+.list-group-item {
+    background-color: $light-yellow;
+    border-color: $deep-red;
+    color: $basketball;
+    transition: .2s ease-out;
+}
+
+.list-group-item:hover {
+    background-color: $deep-red;
+    color: $light-yellow;
+}
