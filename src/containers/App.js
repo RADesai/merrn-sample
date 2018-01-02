@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from '../actions/actions';
-import LandingPage from '../components/LandingPage';
+import LandingPageHeader from '../components/LandingPageHeader';
+import ApiDemo from '../components/ApiDemo';
 import '../assets/scss/App.scss';
 
 class App extends Component {
     render() {
         return (
-            <div className="app-container">
-                <LandingPage
-                    status={ this.props.status }
-                    fetchModelsActionDispatcher={ this.props.actions.fetchModels }
+            <div className="container">
+                <LandingPageHeader />
+                <ApiDemo
+                    { ...this.props }
                 />
             </div>
         )
@@ -21,11 +22,13 @@ class App extends Component {
 
 App.PropTypes = {
     actions: PropTypes.object,
-    reduxState: PropTypes.object
+    models: PropTypes.array,
+    status: PropTypes.string
 };
 
 function mapStateToProps(state) {
-    const { status, models } = state.appReducer;
+    const { models } = state.sampleReducer;
+    const { status } = state.statusReducer;
     return { status, models };
 }
 
