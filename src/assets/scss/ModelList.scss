@@ -1,12 +1,14 @@
 @import "./Styles";
 
 .list-group {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 1px $deep-red;
 }
 
 .list-group-item {
     font-size: 20px;
-    background-color: $light-yellow;
+    background-color: $light-gold;
     border-color: $deep-red;
     color: $basketball;
     transition: .2s ease-out;
@@ -14,5 +16,5 @@
 
 .list-group-item:hover {
     background-color: $deep-red;
-    color: $light-yellow;
+    color: $yellow-paste;
 }

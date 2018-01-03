@@ -1,9 +1,6 @@
 @import "./Styles";
 
 .form-container {
-    border: 1px solid $basketball;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px 1px $deep-red;
     form {
         .form-field {
             margin: 10px;
@@ -18,8 +15,8 @@
                 padding: 3px;
                 border-radius: 4px;
                 margin-top: 5px;
-                background-color: $light-yellow;
-                border: 2px solid $light-yellow;
+                background-color: $yellow-paste;
+                border: 2px solid $yellow-paste;
                 outline: none;
                 color: $deep-red;
                 transition: .2s ease-in;
@@ -32,10 +29,6 @@
         }
         input:focus {
             border: 2px solid $deep-red;
-        }
-        .btn-api-call {
-            background-color: $basketball;
-            color: $light-yellow;
         }
         .btn-group {
             margin: 10px;

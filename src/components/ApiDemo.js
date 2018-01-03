@@ -4,7 +4,7 @@ import ModelList from '../components/ModelList';
 
 const ApiDemo = (props) =>
     <div className="row justify-content-center">
-        <div className="col-sm-12 col-lg-6">
+        <div className="col-sm-12 col-md-10 col-lg-6">
             <SampleApiCalls
                 status={ props.status }
                 selectedCrudOperation={ props.selectedCrudOperation }
@@ -15,7 +15,7 @@ const ApiDemo = (props) =>
                 deleteModelActionDispatcher={ props.actions.deleteModel }
             />
         </div>
-        <div className="col-sm-12 col-lg-6">
+        <div className="col-sm-12 col-md-10 col-lg-6">
             <ModelList
                 models={ props.models }
             />

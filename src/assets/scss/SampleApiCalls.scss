@@ -1,21 +1,49 @@
 @import "./Styles";
 
 .sample-calls {
-    .btn-crud-operation {
-        font-size: 26px;
-        border-color: $deep-red;
-        background-color: $light-yellow;
-        color: $deep-red;
-    }
-    .btn-crud-operation:hover {
-        color: $light-yellow;
-        background-color: $basketball;
+    border: 1px solid $yellow-paste;
+    box-shadow: 0 1px 2px 1px $deep-red;
+    background-color: $light-gold;
+    border-color: $basketball;
+    border-radius: 5px;
+    height: 400px;
+    width: 350px;
+    padding: 15px 0 15px 0;
+    margin-bottom: 10px;
+    transition: .3s ease-in-out;
+    .btn:hover {
         cursor: pointer;
     }
 
+    .btn-crud-operation {
+        font-size: 26px;
+        border-color: $deep-red;
+        background-color: $yellow-paste;
+        color: $deep-red;
+    }
+    .btn-crud-operation:hover {
+        color: $yellow-paste;
+        background-color: $basketball;
+    }
+    .btn-crud-operation:focus {
+        color: $yellow-paste;
+        background-color: $deep-red;
+        box-shadow: none;
+        cursor: pointer;
+    }
+    
     .crud-operations {
-        border: 2px 4px 2px 4px $deep-red;
         padding: 15px;
         font-size: 20px;
+        .btn-api-call {
+            background-color: $basketball;
+            color: $yellow-paste;
+        }
+        .btn-api-call:focus {
+            box-shadow: none;
+        }
+        .btn-api-call:disabled {
+            cursor: not-allowed;
+        }
     }
 }

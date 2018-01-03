@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import actions from '../actions/actions';
 import LandingPageHeader from '../components/LandingPageHeader';
 import ApiDemo from '../components/ApiDemo';
+import Footer from '../components/Footer';
 import '../assets/scss/App.scss';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
                 <ApiDemo
                     { ...this.props }
                 />
+                <Footer />
             </div>
         )
     }

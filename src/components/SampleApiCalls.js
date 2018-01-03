@@ -72,7 +72,7 @@ const SampleApiCalls = (props) => {
 
     return (
         <div className="row justify-content-center">
-            <div className="col-10 col-lg-6 sample-calls text-center">
+            <div className="sample-calls text-center">
                 { getCrudButtons() }
                 <div className="crud-operations">
                     { getCrudOperation() }
