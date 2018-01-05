@@ -1,12 +1,18 @@
-var path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({template: './public/index.html', filename: 'index.html', inject: 'body'});
+const HtmlWebpackPluginConfig =
+    new HtmlWebpackPlugin({template: `${__dirname}/public/index.html`, filename: 'index.html', inject: 'body'});
+
+const hmr = ['babel-polyfill', 'react-hot-loader/patch', 'webpack-hot-middleware/client?noInfo=false'];
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        main: hmr.concat(['./src/index.js'])
+    },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public')
+        path: __dirname,
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -37,5 +43,8 @@ module.exports = {
             }
         ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [
+        HtmlWebpackPluginConfig,
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }

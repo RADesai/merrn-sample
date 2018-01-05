@@ -5,12 +5,9 @@ const Footer = () => {
     return (
         <div className="row">
             <div className="footer text-center">
-                <a target="_blank" href="https://github.com/RADesai/merrn-sample">
-                    <button className="btn btn-lg" type="submit">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/RADesai/merrn-sample">
+                    <button className="btn btn-lg" >
                         MERRN Sample on GitHub
-                    </button>
-                    <button className="btn btn-lg" type="submit">
-                        My GitHub
                     </button>
                 </a>
             </div>
