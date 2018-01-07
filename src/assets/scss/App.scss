@@ -1,6 +1,12 @@
 @import "./Styles";
-
 body {
     background-color: $yellow-paste;
     font-family: $primary-font;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    .contain {
+        min-height: 100%;
+        position: relative;
+    }
 }

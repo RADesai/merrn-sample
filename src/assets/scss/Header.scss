@@ -1,0 +1,12 @@
+@import "./Styles";
+
+.header {
+    color: $deep-red;
+    padding: 10px;
+    background-color: $yellow-paste;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 2px $basketball;
+    .header-title {
+        font-size: 44px;
+    }
+}

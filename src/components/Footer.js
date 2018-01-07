@@ -3,7 +3,7 @@ import '../assets/scss/Footer.scss';
 
 const Footer = () => {
     return (
-        <div className="row">
+        <div>
             <div className="footer text-center">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/RADesai/merrn-sample">
                     <button className="btn btn-lg" >

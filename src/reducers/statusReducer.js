@@ -23,7 +23,8 @@ export default function sampleReducer(state = initialState, action) {
         case `${UPDATE_MODEL}_${REJECTED}`:
         case `${DELETE_MODEL}_${REJECTED}`:
             return {
-                status: REJECTED
+                status: REJECTED,
+                errorMessage: action.payload.response.data
             }
         default:
             return state;

@@ -2,19 +2,17 @@
 
 .list-group {
     margin-bottom: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px 1px $deep-red;
 }
 
 .list-group-item {
     font-size: 20px;
     background: transparent;
-    border-color: $deep-red;
+    border: none;
     color: $basketball;
-    transition: .2s ease-out;
+    padding: 5px;
+    transition: .2s ease-in-out;
 }
 
 .list-group-item:hover {
-    background-color: $deep-red;
-    color: $yellow-paste;
+    box-shadow: 0 0 1px 1px $deep-red;
 }

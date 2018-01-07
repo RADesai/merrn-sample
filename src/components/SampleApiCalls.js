@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../components/Loader';
 import Form from '../components/Form';
 import { ADD_MODEL, UPDATE_MODEL, DELETE_MODEL, CRUD_METHODS } from '../constants';
 import '../assets/scss/SampleApiCalls.scss';
 
 const SampleApiCalls = (props) => {
     const {
-        status,
         fetchModelsActionDispatcher,
         addModelActionDispatcher,
         updateModelActionDispatcher,
@@ -45,12 +43,15 @@ const SampleApiCalls = (props) => {
         } else return null
     }
 
-    const getGetCallButton = () => 
-        <button
-            type="button"
-            className="btn btn-api-call"
-            onClick={ fetchModelsActionDispatcher }>GET Call
-        </button>
+    const getGetCallButton = () =>
+        <div>
+            <div>GET Call</div>
+            <button
+                type="button"
+                className="btn btn-api-call"
+                onClick={ fetchModelsActionDispatcher }>GET Call
+            </button>
+        </div>
 
     const getAddModelForm = () =>
         <Form
@@ -72,13 +73,11 @@ const SampleApiCalls = (props) => {
 
     return (
         <div className="row justify-content-center">
-            <div className="sample-calls text-center">
+            <div className="sample-calls">
                 { getCrudButtons() }
                 <div className="crud-operations">
                     { getCrudOperation() }
-                 </div>
-                <Loader status={ status }/>
-                <br />
+                </div>
             </div>
         </div>
     )

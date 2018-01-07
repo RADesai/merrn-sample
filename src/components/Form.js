@@ -16,13 +16,11 @@ const Form = (props) => {
 
     const getIdField = () => 
         <div className="form-field">
-            <label>Model ID:</label><hr />
             <Field name="modelId" component="input" type="text" placeholder="Model ID"/>
         </div>
 
     const getNameField = () =>
         <div className="form-field">
-            <label>Name:</label><hr />
             <Field name="modelName" component="input" type="text" placeholder="Model Name"/>
         </div>
 

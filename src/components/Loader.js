@@ -1,12 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { PENDING } from '../constants';
-import '../assets/scss/Loader.scss';
+import React from 'react'
+import '../assets/scss/Loader.scss'
 
-const Loader = (props) => props.status === PENDING ? <div className="loader" /> : null
-
-Loader.propTypes = {
-    status: PropTypes.string
-}
+const Loader = () => <div className="loader" />
 
 export default Loader;
