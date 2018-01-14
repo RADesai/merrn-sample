@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/scss/Footer.scss';
+import '../assets/scss/AppFooter.scss';
 
-const Footer = () => {
+const AppFooter = () => {
     return (
         <div>
             <div className="footer text-center">
@@ -16,4 +16,4 @@ const Footer = () => {
 }
 
 
-export default Footer;
+export default AppFooter;

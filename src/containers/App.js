@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from '../actions/actions';
-import Header from '../components/Header';
+import AppHeader from '../components/AppHeader';
 import ApiDemo from '../components/ApiDemo';
-import Footer from '../components/Footer';
+import AppFooter from '../components/AppFooter';
 import '../assets/scss/App.scss';
 
 class App extends Component {
     render() {
         return (
             <div className="contain">
-                <Header />
+                <AppHeader />
                 <ApiDemo
                     { ...this.props }
                 />
-                <Footer />
+                <AppFooter />
             </div>
         )
     }

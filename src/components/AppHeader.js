@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/scss/Header.scss';
+import '../assets/scss/AppHeader.scss';
 
-const Header = () => {
+const AppHeader = () => {
     const getHeaderContent = () =>
         <div className="row">
             <div className="header-title col-12">MERRN Sample</div>
@@ -16,4 +16,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default AppHeader;
