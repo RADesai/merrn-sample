@@ -1,12 +1,10 @@
 import React from 'react'
 import SampleApiCalls from '../components/SampleApiCalls'
-import Loader from '../components/Loader'
 import ModelList from '../components/ModelList'
+import ApiStatus from '../components/ApiStatus'
 import '../assets/scss/ApiDemo.scss'
-import { PENDING, REJECTED, FULFILLED } from '../constants'
-import Error from './Error';
 
-const ApiDemo = (props) =>
+const ApiDemo = props =>
     <div className="container">
         <div className="row text-center">
             <div className="col-sm-12 col-md-6 col-lg-4 jumbotron">
@@ -20,24 +18,10 @@ const ApiDemo = (props) =>
                 />
             </div>
             <div className="col-sm-12 col-md-6 col-lg-4 jumbotron">
-                { props.status }
-                {
-                    props.status === FULFILLED
-                        ? <div className="success">
-                            success message
-                        </div>
-                        : null
-                }
-                {
-                    props.status === PENDING ? <Loader /> : null
-                }
-                {
-                    props.status === REJECTED
-                        ? <Error
-                            error={ props.errorMessage }
-                        />
-                        : null
-                }
+                <ApiStatus
+                    status={ props.status }
+                    serviceMessage={ props.serviceMessage }
+                />
             </div>
             <div className="col-sm-12 col-md-12 col-lg-4 jumbotron">
                 <ModelList

@@ -1,5 +1,4 @@
 @import "./Styles";
-
 .sample-calls {
     height: 400px;
     width: 350px;
@@ -9,7 +8,6 @@
     .btn:hover {
         cursor: pointer;
     }
-
     .btn-crud-operation {
         font-size: 26px;
         border-color: $deep-red;
@@ -26,10 +24,13 @@
         box-shadow: none;
         cursor: pointer;
     }
-    
     .crud-operations {
-        padding: 15px;
+        padding: 0 0 15px 0;
         font-size: 20px;
+        .http-method {
+            padding-top: 10px;
+            font-size: 30px;
+        }
         .btn-api-call {
             background-color: $basketball;
             color: $yellow-paste;

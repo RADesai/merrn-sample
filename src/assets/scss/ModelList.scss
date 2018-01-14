@@ -11,6 +11,9 @@
     color: $basketball;
     padding: 5px;
     transition: .2s ease-in-out;
+    .item-name {
+        font-size: 24px;
+    }
 }
 
 .list-group-item:hover {

@@ -9,7 +9,7 @@ export default function ModelList(props) {
         <ul className="list-group">
             { models.map((model) =>
             <li key={ model._id } className="list-group-item">
-                { model.name }
+                <span className="item-name">{ model.name }</span>
                 <br />
                 <small>id - { model._id }</small>
             </li>

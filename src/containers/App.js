@@ -26,14 +26,14 @@ App.PropTypes = {
     actions: PropTypes.object,
     selectedCrudOperation: PropTypes.string,
     models: PropTypes.array,
-    errorMessage: PropTypes.object,
+    serviceMessage: PropTypes.string,
     status: PropTypes.string
 };
 
 function mapStateToProps(state) {
     const { selectedCrudOperation, models } = state.sampleReducer;
-    const { status, errorMessage } = state.statusReducer;
-    return { selectedCrudOperation, models, status, errorMessage };
+    const { status, serviceMessage } = state.statusReducer;
+    return { selectedCrudOperation, models, status, serviceMessage };
 }
 
 function mapDispatchToProps(dispatch) {

@@ -14,7 +14,7 @@ module.exports = {
         model.save(err => {
             err
                 ? res.status(500).send(err)
-                : res.status(200).json({message: 'Model Created!'})
+                : res.json({message: `"${req.body.modelName}" Created!`})
         });
     },
     updateModel: (req, res) => {
@@ -22,11 +22,12 @@ module.exports = {
             if (err) {
                 res.status(500).send(err)
             } else {
+                let previousName = model.name;
                 model.name = req.body.modelName || 'Anonymous';
                 model.save((error) => {
                     error
                         ? res.status(500).send(error)
-                        : res.status(204).json({message: 'Model Updated!'})
+                        : res.json({message: `"${previousName}" updated to "${req.body.modelName}"!`})
                 });
             }
         })
@@ -35,7 +36,7 @@ module.exports = {
         SampleModel.findByIdAndRemove(req.params.id, err => {
             err
                 ? res.status(500).send(err)
-                : res.status(204).json({message: 'Model Deleted!'})
+                : res.json({message: 'Successfully Deleted!'})
         })
     }
 }

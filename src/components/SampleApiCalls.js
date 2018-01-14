@@ -4,7 +4,7 @@ import Form from '../components/Form';
 import { ADD_MODEL, UPDATE_MODEL, DELETE_MODEL, CRUD_METHODS } from '../constants';
 import '../assets/scss/SampleApiCalls.scss';
 
-const SampleApiCalls = (props) => {
+const SampleApiCalls = props => {
     const {
         fetchModelsActionDispatcher,
         addModelActionDispatcher,
@@ -32,24 +32,22 @@ const SampleApiCalls = (props) => {
         </div>
 
     const getCrudOperation = () => {
-        if (selectedCrudOperation === 'CREATE') {
-            return getAddModelForm()
-        } else if (selectedCrudOperation === 'READ') {
-            return getGetCallButton()
-        } else if (selectedCrudOperation === 'UPDATE') {
-            return getUpdateModelForm()
-        } else if (selectedCrudOperation === 'DELETE') {
-            return getDeleteModelForm()
-        } else return null
+        const crudOps = {
+            'CREATE': getAddModelForm,
+            'READ': getGetCallButton,
+            'UPDATE': getUpdateModelForm,
+            'DELETE': getDeleteModelForm
+        };
+        return crudOps[selectedCrudOperation] ? crudOps[selectedCrudOperation]() : null;
     }
 
     const getGetCallButton = () =>
         <div>
-            <div>GET Call</div>
+            <div className="http-method">Retrieve<br /><small>(GET)</small></div>
             <button
                 type="button"
                 className="btn btn-api-call"
-                onClick={ fetchModelsActionDispatcher }>GET Call
+                onClick={ fetchModelsActionDispatcher }>Fetch
             </button>
         </div>
 
@@ -84,16 +82,12 @@ const SampleApiCalls = (props) => {
 }
 
 SampleApiCalls.propTypes = {
-    status: PropTypes.string,
     selectedCrudOperation: PropTypes.string,
     setCrudOperation: PropTypes.func,
     fetchModelsActionDispatcher: PropTypes.func,
     addModelActionDispatcher: PropTypes.func,
     updateModelActionDispatcher: PropTypes.func,
-    deleteModelActionDispatcher: PropTypes.func,
-    handleSubmit: PropTypes.func,
-    pristine: PropTypes.bool,
-    submitting: PropTypes.bool
+    deleteModelActionDispatcher: PropTypes.func
 }
 
 export default SampleApiCalls;

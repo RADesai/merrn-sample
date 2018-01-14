@@ -1,14 +1,14 @@
 import React from 'react'
-// import '../assets/scss/Error.scss'
+import '../assets/scss/Error.scss'
 
-const Error = (props) =>
+const Error = props =>
     <div className="error">
         ERROR Status:
         <br/>
         <div className="error-message">
             { props.error
                 ? `${props.error.name}: ${props.error.message}`
-                : 'Unkown Error'
+                : 'Unknown Error'
             }
         </div>
     </div>

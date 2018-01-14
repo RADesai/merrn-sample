@@ -14,6 +14,15 @@ const Form = (props) => {
         submitting
     } = props;
 
+    const getMethodHeader = (methodType) => {
+        const headers = {
+            ADD_MODEL: <div className="http-method">Create<br /><small>(POST)</small></div>,
+            UPDATE_MODEL: <div className="http-method">Update<br /><small>(PUT)</small></div>,
+            DELETE_MODEL: <div className="http-method">Delete<br /><small>(DELETE)</small></div>
+        };
+        return headers[methodType]
+    }
+
     const getIdField = () => 
         <div className="form-field">
             <Field name="modelId" component="input" type="text" placeholder="Model ID"/>
@@ -26,10 +35,8 @@ const Form = (props) => {
 
     return (
         <div className="form-container">
-            <div>{ actionType === ADD_MODEL ? 'POST Call' : null }</div>
-            <div>{ actionType === UPDATE_MODEL ? 'PUT Call' : null }</div>
-            <div>{ actionType === DELETE_MODEL ? 'DELETE Call' : null }</div>
-            <form onSubmit={ handleSubmit((form) => actionDispatcher(form)) }>
+            { getMethodHeader(actionType) }
+            <form onSubmit={ handleSubmit(form => actionDispatcher(form)) }>
                 { actionType === UPDATE_MODEL || actionType === DELETE_MODEL ? getIdField() : null }
                 { actionType === ADD_MODEL || actionType === UPDATE_MODEL ? getNameField() : null }
                 <div className="btn-group" role="group" aria-label="example">

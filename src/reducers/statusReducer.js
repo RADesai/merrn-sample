@@ -9,12 +9,17 @@ export default function sampleReducer(state = initialState, action) {
         case `${UPDATE_MODEL}_${PENDING}`:
         case `${DELETE_MODEL}_${PENDING}`:
             return {
+                ...state,
                 status: PENDING
             }
-        case `${FETCH_MODELS}_${FULFILLED}`:
         case `${ADD_MODEL}_${FULFILLED}`:
         case `${UPDATE_MODEL}_${FULFILLED}`:
         case `${DELETE_MODEL}_${FULFILLED}`:
+            return {
+                status: FULFILLED,
+                serviceMessage: action.payload.data.message
+            }
+        case `${FETCH_MODELS}_${FULFILLED}`:
             return {
                 status: FULFILLED
             }
@@ -24,7 +29,7 @@ export default function sampleReducer(state = initialState, action) {
         case `${DELETE_MODEL}_${REJECTED}`:
             return {
                 status: REJECTED,
-                errorMessage: action.payload.response.data
+                serviceMessage: action.payload.response.data
             }
         default:
             return state;
